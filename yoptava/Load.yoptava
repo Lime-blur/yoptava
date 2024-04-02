@@ -1,8 +1,25 @@
+импортировать java.util.ArrayList;
+импортировать java.util.List;
+
 публичный класс Load {
 
-    публичный статический конечный String SOME_CONSTANT = "Hello World!";
+    приватный статический конечный List<String> strings = новый ArrayList<String>() {
+        {
+            add("Значение 1");
+            add("Значение 2");
+            add("Значение 3");
+            add("Значение 4");
+            add("Значение 5");
+        }
+    };
 
     публичный статический пустой load() {
-        System.out.println(SOME_CONSTANT);
+        printStrings();
+    }
+
+    приватный статический пустой printStrings() {
+        для (String s : strings) {
+            System.out.println(s);
+        }
     }
 }
