@@ -28,7 +28,8 @@ public class Main {
     private static void prepareCache() throws IOException {
         CacheUtils.refreshCacheDirectory();
         YoptavaFileUtils.createSourcesInCacheDirectory();
-        for (String file : YoptavaFiles.files) {
+        String sourcesDirectory = YoptavaFileUtils.getSourcesDirectory();
+        for (String file : FileUtils.listShortFilesPath(sourcesDirectory)) {
             YoptavaFileUtils.putYoptavaInCache(file);
         }
     }
@@ -38,7 +39,8 @@ public class Main {
     }
 
     private static void loadClasses() throws IOException {
-        for (String file : YoptavaFiles.files) {
+        String sourcesDirectory = YoptavaFileUtils.getSourcesDirectory();
+        for (String file : FileUtils.listShortFilesPath(sourcesDirectory)) {
             String javaFile = YoptavaFileUtils.getCachedYoptavaName(file);
             contents.put(
                 javaFile, YoptavaFileUtils.readYoptavaFromCache(javaFile)
@@ -56,12 +58,18 @@ public class Main {
     }
 
     private static void loadClasses(JavaStringCompiler compiler) throws IOException, ClassNotFoundException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+        Class<?> mainClass = null;
         for (Map.Entry<String, Map<String, byte[]>> entry : compileResults.entrySet()) {
             String className = entry.getKey().replace(FileUtils.JAVA_EXTENSION, "");
             Class<?> clazz = compiler.loadClass(className, entry.getValue());
-
-            Method multiplyStaticMethod = clazz.getDeclaredMethod("load");
-            multiplyStaticMethod.invoke(new Object());
+            if (className.equals(YoptavaFiles.MAIN_CLASS_NAME)) mainClass = clazz;
         }
+        runMainClass(mainClass);
+    }
+
+    private static void runMainClass(Class<?> mainClass) throws InvocationTargetException, IllegalAccessException, NoSuchMethodException {
+        if (mainClass == null) return;
+        Method multiplyStaticMethod = mainClass.getDeclaredMethod(YoptavaFiles.MAIN_CLASS_LOAD_METHOD);
+        multiplyStaticMethod.invoke(new Object());
     }
 }

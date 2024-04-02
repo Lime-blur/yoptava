@@ -33,16 +33,16 @@ public class YoptavaFileUtils {
         Files.createDirectory(getSourcesInCacheDirectoryPath());
     }
 
+    public static String getSourcesDirectory() {
+        String sourcesDirectory = StringUtils.EMPTY_STRING;
+        if (!YoptavaFiles.SOURCES_DIRECTORY.isEmpty()) sourcesDirectory = YoptavaFiles.SOURCES_DIRECTORY;
+        return sourcesDirectory;
+    }
+
     private static Path getYoptavaPath(String file) {
         String sourcesDirectory = getSourcesDirectory();
         if (file != null) sourcesDirectory += FileUtils.fileSeparator + file;
         return FileUtils.getAbsolutePath(sourcesDirectory);
-    }
-
-    private static String getSourcesDirectory() {
-        String sourcesDirectory = StringUtils.EMPTY_STRING;
-        if (!YoptavaFiles.SOURCES_DIRECTORY.isEmpty()) sourcesDirectory = YoptavaFiles.SOURCES_DIRECTORY;
-        return sourcesDirectory;
     }
 
     private static Path getYoptavaPathFromCache(String file) {
