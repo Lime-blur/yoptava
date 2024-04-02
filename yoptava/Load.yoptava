@@ -3,14 +3,21 @@
 
 публичный класс Load {
 
-    приватный статический конечный List<String> strings = новый ArrayList<String>() {
+    приватный статический конечный List<String> keywordStrings = новый ArrayList<String>() {
         {
-            add("Значение 1");
-            add("Значение 2");
-            add("Значение 3");
-            add("Значение 4");
-            add("Значение 5");
+            add("публичный статический пустой 1");
+            add("публичный статический пустой 2");
+            add("публичный статический пустой 3");
+            add("публичный статический пустой 4");
+            add("публичный статический пустой 5");
         }
+    };
+
+    приватный статический конечный целый[][] matrix = {
+        {0, 1, 2, 3, 4},
+        {1, 2, 3, 4, 5},
+        {2, 3, 4, 5, 6},
+        {3, 4, 5, 6, 7}
     };
 
     /**
@@ -18,11 +25,69 @@
      */
     публичный статический пустой load() {
         printStrings();
+        printMatrix();
+        printPlanetAtmosphere();
     }
 
+    /**
+     * Печатает список из строк с ключевыми словами Yoptava.
+     */
     приватный статический пустой printStrings() {
-        для (String s : strings) {
-            System.out.println(s);
+        для (String keyword : keywordStrings) {
+            System.out.println(keyword);
         }
+    }
+
+    /**
+     * Печатает матрицу из целых чисел.
+     */
+    приватный статический пустой printMatrix() {
+        для (целый i = 0; i < matrix.length; i++) {
+           для (целый j = 0; j < matrix[i].length; j++) {
+               System.out.print(matrix[i][j] + " ");
+           }
+           System.out.print("\n");
+        }
+    }
+
+    /**
+     * Печатает атмосферу планеты Земля.
+     */
+    приватный статический пустой printPlanetAtmosphere() {
+        List<String> atmosphere = getPlanetAtmosphere(3);
+        System.out.println("Атмосфера планеты Земля состоит из:");
+        для (String component : atmosphere) {
+            System.out.println(component);
+        }
+    }
+
+    /**
+     * Определяет атмосферу планеты по значению seqNumberFromSun.
+     */
+    приватный статический List<String> getPlanetAtmosphere(целый seqNumberFromSun) {
+        List<String> result = новый ArrayList<>();
+        когда (seqNumberFromSun) {
+            случай 1: result.add("Нет атмосферы");
+                прервать;
+            случай 2:
+            случай 4: result.add("Углекислый газ");
+                прервать;
+            случай 3: result.add("Углекислый газ");
+                result.add("Азот");
+                result.add("Кислород");
+                прервать;
+            случай 5:
+            случай 6: result.add("Водород");
+                result.add("Гелий");
+                break;
+            случай 7:
+            случай 8: result.add("Метан");
+                result.add("Водород");
+                result.add("Гелий");
+                прервать;
+            стандартный:
+                прервать;
+        }
+        вернуть result;
     }
 }

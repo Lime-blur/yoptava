@@ -1,6 +1,8 @@
-package files;
+package settings;
 
-public class YoptavaFiles {
+import files.FileUtils;
+
+public class YoptavaSettings {
 
     /**
      * Extension of Russian-language java files.

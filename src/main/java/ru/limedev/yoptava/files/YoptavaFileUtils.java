@@ -8,11 +8,12 @@ import java.nio.file.Path;
 import cache.CacheUtils;
 import core.StringUtils;
 import parser.YoptavaParser;
+import settings.YoptavaSettings;
 
 public class YoptavaFileUtils {
 
     public static String getCachedYoptavaName(String file) {
-        return file.replace(YoptavaFiles.FILE_EXTENSION, FileUtils.JAVA_EXTENSION);
+        return file.replace(YoptavaSettings.FILE_EXTENSION, FileUtils.JAVA_EXTENSION);
     }
 
     public static String readYoptavaFromCache(String javaFile) throws IOException {
@@ -35,7 +36,7 @@ public class YoptavaFileUtils {
 
     public static String getSourcesDirectory() {
         String sourcesDirectory = StringUtils.EMPTY_STRING;
-        if (!YoptavaFiles.SOURCES_DIRECTORY.isEmpty()) sourcesDirectory = YoptavaFiles.SOURCES_DIRECTORY;
+        if (!YoptavaSettings.SOURCES_DIRECTORY.isEmpty()) sourcesDirectory = YoptavaSettings.SOURCES_DIRECTORY;
         return sourcesDirectory;
     }
 
@@ -56,8 +57,8 @@ public class YoptavaFileUtils {
 
     private static String getSourcesInCacheDirectory() {
         String sourcesDirectory = CacheUtils.CACHE_DIRECTORY;
-        boolean isSourcesDirectoryEmpty = YoptavaFiles.SOURCES_DIRECTORY.isEmpty();
-        if (!isSourcesDirectoryEmpty) sourcesDirectory += FileUtils.fileSeparator + YoptavaFiles.SOURCES_DIRECTORY;
+        boolean isSourcesDirectoryEmpty = YoptavaSettings.SOURCES_DIRECTORY.isEmpty();
+        if (!isSourcesDirectoryEmpty) sourcesDirectory += FileUtils.fileSeparator + YoptavaSettings.SOURCES_DIRECTORY;
         return sourcesDirectory;
     }
 }

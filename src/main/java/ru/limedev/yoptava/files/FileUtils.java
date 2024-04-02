@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import core.StringUtils;
+import settings.YoptavaSettings;
 
 public class FileUtils {
 
@@ -26,7 +27,7 @@ public class FileUtils {
     public static List<String> listShortFilesPath(String directoryName) {
         List<String> files = new ArrayList<>();
         for (String file : listFilesPath(directoryName)) {
-            String shortPath = StringUtils.replaceBefore(file, YoptavaFiles.PROJECT_SOURCES_DIRECTORY);
+            String shortPath = StringUtils.replaceBefore(file, YoptavaSettings.PROJECT_SOURCES_DIRECTORY);
             files.add(shortPath);
         }
         return files;

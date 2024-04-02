@@ -7,9 +7,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 import cache.CacheUtils;
+import core.StringUtils;
 import files.FileUtils;
 import files.YoptavaFileUtils;
-import files.YoptavaFiles;
+import settings.YoptavaSettings;
 
 public class Main {
 
@@ -60,16 +61,16 @@ public class Main {
     private static void loadClasses(JavaStringCompiler compiler) throws IOException, ClassNotFoundException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         Class<?> mainClass = null;
         for (Map.Entry<String, Map<String, byte[]>> entry : compileResults.entrySet()) {
-            String className = entry.getKey().replace(FileUtils.JAVA_EXTENSION, "");
+            String className = entry.getKey().replace(FileUtils.JAVA_EXTENSION, StringUtils.EMPTY_STRING);
             Class<?> clazz = compiler.loadClass(className, entry.getValue());
-            if (className.equals(YoptavaFiles.MAIN_CLASS_NAME)) mainClass = clazz;
+            if (className.equals(YoptavaSettings.MAIN_CLASS_NAME)) mainClass = clazz;
         }
         runMainClass(mainClass);
     }
 
     private static void runMainClass(Class<?> mainClass) throws InvocationTargetException, IllegalAccessException, NoSuchMethodException {
         if (mainClass == null) return;
-        Method multiplyStaticMethod = mainClass.getDeclaredMethod(YoptavaFiles.MAIN_CLASS_LOAD_METHOD);
+        Method multiplyStaticMethod = mainClass.getDeclaredMethod(YoptavaSettings.MAIN_CLASS_LOAD_METHOD);
         multiplyStaticMethod.invoke(new Object());
     }
 }
