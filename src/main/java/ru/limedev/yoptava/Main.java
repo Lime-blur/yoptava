@@ -1,11 +1,14 @@
 import com.itranswarp.compiler.JavaStringCompiler;
 
 import java.io.IOException;
-import java.nio.charset.Charset;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
+import cache.CacheUtils;
 import files.FileUtils;
+import files.YoptavaFileUtils;
 import files.YoptavaFiles;
 
 public class Main {
@@ -13,26 +16,32 @@ public class Main {
     private static final Map<String, String> contents = new HashMap<>();
     private static final Map<String, Map<String, byte[]>> compileResults = new HashMap<>();
 
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
+    public static void main(String[] args) throws IOException, ClassNotFoundException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
         JavaStringCompiler compiler = new JavaStringCompiler();
         prepareCache();
         loadClasses();
         compileClasses(compiler);
         loadClasses(compiler);
+        clearCache();
     }
 
     private static void prepareCache() throws IOException {
-        FileUtils.refreshCacheDirectory();
+        CacheUtils.refreshCacheDirectory();
+        YoptavaFileUtils.createSourcesInCacheDirectory();
         for (String file : YoptavaFiles.files) {
-            FileUtils.putYoptavaToCache(file);
+            YoptavaFileUtils.putYoptavaInCache(file);
         }
+    }
+
+    private static void clearCache() {
+        CacheUtils.clearCacheDirectory();
     }
 
     private static void loadClasses() throws IOException {
         for (String file : YoptavaFiles.files) {
-            String javaFile = FileUtils.getCacheYoptavaName(file);
+            String javaFile = YoptavaFileUtils.getCachedYoptavaName(file);
             contents.put(
-                javaFile, FileUtils.readYoptavaFromCache(javaFile, Charset.defaultCharset())
+                javaFile, YoptavaFileUtils.readYoptavaFromCache(javaFile)
             );
         }
     }
@@ -46,10 +55,13 @@ public class Main {
         }
     }
 
-    private static void loadClasses(JavaStringCompiler compiler) throws IOException, ClassNotFoundException {
+    private static void loadClasses(JavaStringCompiler compiler) throws IOException, ClassNotFoundException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         for (Map.Entry<String, Map<String, byte[]>> entry : compileResults.entrySet()) {
             String className = entry.getKey().replace(FileUtils.JAVA_EXTENSION, "");
-            compiler.loadClass(className, entry.getValue());
+            Class<?> clazz = compiler.loadClass(className, entry.getValue());
+
+            Method multiplyStaticMethod = clazz.getDeclaredMethod("load");
+            multiplyStaticMethod.invoke(new Object());
         }
     }
 }

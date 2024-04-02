@@ -1,0 +1,8 @@
+публичный класс Load {
+
+    публичный статический конечный String SOME_CONSTANT = "Hello World!";
+
+    публичный статический пустой load() {
+        System.out.println(SOME_CONSTANT);
+    }
+}
