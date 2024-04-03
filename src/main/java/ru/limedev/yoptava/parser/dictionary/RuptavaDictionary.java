@@ -1,11 +1,13 @@
-package parser;
+package parser.dictionary;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class YoptavaDictionary {
+public class RuptavaDictionary implements Dictionary {
 
-    public static Map<String, String> keywords = new HashMap<String, String>() {
+    private final Map<String, String> keywords = new HashMap<String, String>() {
         {
             put("публичный", "public");
             put("класс", "class");
@@ -62,4 +64,9 @@ public class YoptavaDictionary {
             put("нулевой", "null");
         }
     };
+
+    @Override
+    public @NotNull Map<String, String> getKeywords() {
+        return keywords;
+    }
 }

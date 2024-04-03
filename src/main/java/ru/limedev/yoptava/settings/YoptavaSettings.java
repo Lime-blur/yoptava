@@ -5,12 +5,15 @@ import files.FileUtils;
 public class YoptavaSettings {
 
     /**
-     * Extension of Russian-language java files.
+     * Current Russian programming language type.
      */
-    public static final String FILE_EXTENSION = ".yoptava";
+    public static final LanguageType LANGUAGE_TYPE = LanguageType.YOPTAVA;
 
     /**
-     * The initial directory where Russian-language java files are located.
+     * The initial directory where Russian-language java files are located.<br><br>
+     * For {@link LanguageType#YOPTAVA} = yoptava<br>
+     * For {@link LanguageType#RUPTAVA} = ruptava<br>
+     * For {@link LanguageType#LEPTAVA} = leptava<br>
      */
     public static final String SOURCES_DIRECTORY = "yoptava";
 

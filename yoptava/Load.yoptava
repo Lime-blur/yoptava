@@ -1,19 +1,19 @@
-импортировать java.util.ArrayList;
-импортировать java.util.List;
+спиздить java.util.ArrayList;
+спиздить java.util.List;
 
-публичный класс Load {
+ёбанный клёво Load {
 
-    приватный статический конечный List<String> keywordStrings = новый ArrayList<String>() {
+    мой попонятиям бачок List<String> keywordKids = захуярить ArrayList<String>() {
         {
-            add("публичный статический пустой 1");
-            add("публичный статический пустой 2");
-            add("публичный статический пустой 3");
-            add("публичный статический пустой 4");
-            add("публичный статический пустой 5");
+            add("ебанный клёво 1");
+            add("ебанный клёво 2");
+            add("ебанный клёво 3");
+            add("ебанный клёво 4");
+            add("ебанный клёво 5");
         }
     };
 
-    приватный статический конечный целый[][] matrix = {
+    мой попонятиям бачок хуйня[][] detentionCell = {
         {0, 1, 2, 3, 4},
         {1, 2, 3, 4, 5},
         {2, 3, 4, 5, 6},
@@ -21,73 +21,73 @@
     };
 
     /**
-     * Альтернатива методу "main" в java.
+     * Типа метод "main" в java.
      */
-    публичный статический пустой load() {
-        printStrings();
-        printMatrix();
-        printPlanetAtmosphere();
+    ёбанный попонятиям беспонтовый load() {
+        printKids();
+        printDetentionCell();
+        printNearestEntrance();
     }
 
     /**
-     * Печатает список из строк с ключевыми словами Yoptava.
+     * Печатает список из пацанов с отмычками Yoptava.
      */
-    приватный статический пустой printStrings() {
-        для (String keyword : keywordStrings) {
+    мой попонятиям беспонтовый printKids() {
+        го (String keyword : keywordKids) {
             System.out.println(keyword);
         }
     }
 
     /**
-     * Печатает матрицу из целых чисел.
+     * Печатает камеру из хуйни.
      */
-    приватный статический пустой printMatrix() {
-        для (целый i = 0; i < matrix.length; i++) {
-           для (целый j = 0; j < matrix[i].length; j++) {
-               System.out.print(matrix[i][j] + " ");
+    мой попонятиям беспонтовый printDetentionCell() {
+        го (хуйня i = 0; i < detentionCell.length; i++) {
+           го (хуйня j = 0; j < detentionCell[i].length; j++) {
+               System.out.print(detentionCell[i][j] + " ");
            }
            System.out.print("\n");
         }
     }
 
     /**
-     * Печатает атмосферу планеты Земля.
+     * Печатает место ближайшего падика.
      */
-    приватный статический пустой printPlanetAtmosphere() {
-        List<String> atmosphere = getPlanetAtmosphere(3);
-        System.out.println("Атмосфера планеты \"Земля\" состоит из:");
-        для (String component : atmosphere) {
-            System.out.println(component);
+    мой попонятиям беспонтовый printNearestEntrance() {
+        List<String> entrance = getNearestEntrance(3);
+        System.out.println("Ближайший падик:");
+        го (String thing : entrance) {
+            System.out.println(thing);
         }
     }
 
     /**
-     * Определяет атмосферу планеты по значению seqNumberFromSun.
+     * Определяет ближайший падик по хуйне entranceNumber.
      */
-    приватный статический List<String> getPlanetAtmosphere(целый seqNumberFromSun) {
-        List<String> result = новый ArrayList<>();
-        когда (seqNumberFromSun) {
-            случай 1: result.add("Нет атмосферы");
-                прервать;
-            случай 2:
-            случай 4: result.add("Углекислый газ");
-                прервать;
-            случай 3: result.add("Углекислый газ");
-                result.add("Азот");
-                result.add("Кислород");
-                прервать;
-            случай 5:
-            случай 6: result.add("Водород");
-                result.add("Гелий");
-                break;
-            случай 7:
-            случай 8: result.add("Метан");
-                result.add("Водород");
-                result.add("Гелий");
-                прервать;
-            стандартный:
-                прервать;
+    мой попонятиям List<String> getNearestEntrance(хуйня entranceNumber) {
+        List<String> result = захуярить ArrayList<>();
+        естьчо (entranceNumber) {
+            аеслинайду 1: result.add("Лавэ");
+                харэ;
+            аеслинайду 2:
+            аеслинайду 4: result.add("Семка");
+                харэ;
+            аеслинайду 3: result.add("Лавэ");
+                result.add("Семка");
+                result.add("Петух");
+                харэ;
+            аеслинайду 5:
+            аеслинайду 6: result.add("Бычки");
+                result.add("Кент");
+                харэ;
+            аеслинайду 7:
+            аеслинайду 8: result.add("Общак");
+                result.add("Кент");
+                result.add("Петух");
+                харэ;
+            апохуй:
+                харэ;
         }
-        вернуть result;
+        отвечаю result;
     }
 }

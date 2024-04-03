@@ -13,7 +13,7 @@ import settings.YoptavaSettings;
 public class YoptavaFileUtils {
 
     public static String getCachedYoptavaName(String file) {
-        return file.replace(YoptavaSettings.FILE_EXTENSION, FileUtils.JAVA_EXTENSION);
+        return file.replace(YoptavaSettings.LANGUAGE_TYPE.extension, FileUtils.JAVA_EXTENSION);
     }
 
     public static String readYoptavaFromCache(String javaFile) throws IOException {
