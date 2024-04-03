@@ -7,7 +7,7 @@ import settings.YoptavaSettings;
 
 public class YoptavaParser {
 
-    private static final String DOUBLE_QUOTED_PATTERN = "(?!\\\")(?=\")";
+    private static final String DOUBLE_QUOTED_PATTERN = "(?!\\\\\")(?=\")";
 
     public static String parseAndConvert(String text) {
         String[] textParts = text.split(DOUBLE_QUOTED_PATTERN);
