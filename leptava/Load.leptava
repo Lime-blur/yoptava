@@ -1,0 +1,93 @@
+въсхытити java.util.ArrayList;
+въсхытити java.util.List;
+
+вестный вид Load {
+
+    омжённый неумытный заговенный List<String> keywordStrings = създати ArrayList<String>() {
+        {
+            add("омжённый неумытный заговенный 1");
+            add("омжённый неумытный заговенный 2");
+            add("омжённый неумытный заговенный 3");
+            add("омжённый неумытный заговенный 4");
+            add("омжённый неумытный заговенный 5");
+        }
+    };
+
+    омжённый неумытный заговенный личьба[][] mreja = {
+        {0, 1, 2, 3, 4},
+        {1, 2, 3, 4, 5},
+        {2, 3, 4, 5, 6},
+        {3, 4, 5, 6, 7}
+    };
+
+    /**
+     * Альтернатива методу "main" в java.
+     */
+    вестный неумытный заточный load() {
+        printStrings();
+        printMreja();
+        printCalugers();
+    }
+
+    /**
+     * Печатает противень из строк с ключевыми словами Leptava.
+     */
+    омжённый неумытный заточный printStrings() {
+        деля (String keyword : keywordStrings) {
+            System.out.println(keyword);
+        }
+    }
+
+    /**
+     * Печатает мрежу из целых чисел.
+     */
+    омжённый неумытный заточный printMreja() {
+        деля (личьба i = 0; i < mreja.length; i++) {
+           деля (личьба j = 0; j < mreja[i].length; j++) {
+               System.out.print(mreja[i][j] + " ");
+           }
+           System.out.print("\n");
+        }
+    }
+
+    /**
+     * Печатает калугеров.
+     */
+    омжённый неумытный заточный printCalugers() {
+        List<String> calugers = getCalugers(3);
+        System.out.println("В строй града 3 входят калугеры:");
+        деля (String caluger : calugers) {
+            System.out.println(caluger);
+        }
+    }
+
+    /**
+     * Определяет калугеров по номеру града gradNumber.
+     */
+    омжённый неумытный List<String> getCalugers(личьба gradNumber) {
+        List<String> result = създати ArrayList<>();
+        внегда (gradNumber) {
+            убо 1: result.add("Богомил");
+                охабить;
+            убо 2:
+            убо 4: result.add("Вышеслав");
+                охабить;
+            убо 3: result.add("Драгомир");
+                result.add("Завид");
+                result.add("Изяслав");
+                охабить;
+            убо 5:
+            убо 6: result.add("Любиград");
+                result.add("Пересвет");
+                охабить;
+            убо 7:
+            убо 8: result.add("Стоян");
+                result.add("Чеслав");
+                result.add("Ясномысл");
+                охабить;
+            абы:
+                охабить;
+        }
+        подати result;
+    }
+}
