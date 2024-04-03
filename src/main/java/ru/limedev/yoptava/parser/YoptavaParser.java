@@ -6,11 +6,10 @@ import core.StringUtils;
 
 public class YoptavaParser {
 
-    private static final String CRLF = "[\\ \t \f]* \\R";
-    private static final String DOUBLE_QUOTED_STRING = "\"([^\\\"\r\n] | \\[^\r\n] | \\" + CRLF + ")*\"?";
+    private static final String DOUBLE_QUOTED_PATTERN = "(?!\\\")(?=\")";
 
     public static String parseAndConvert(String text) {
-        String[] textParts = text.split("(?=" + DOUBLE_QUOTED_STRING +")");
+        String[] textParts = text.split(DOUBLE_QUOTED_PATTERN);
         for (Map.Entry<String, String> entry : YoptavaDictionary.keywords.entrySet()) {
             for (int i = 0; i < textParts.length; i++) {
                 if (i % 2 != 0) continue;

@@ -55,7 +55,7 @@
      */
     приватный статический пустой printPlanetAtmosphere() {
         List<String> atmosphere = getPlanetAtmosphere(3);
-        System.out.println("Атмосфера планеты Земля состоит из:");
+        System.out.println("Атмосфера планеты \"Земля\" состоит из:");
         для (String component : atmosphere) {
             System.out.println(component);
         }
