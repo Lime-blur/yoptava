@@ -8,9 +8,9 @@
 
 Yoptava — это первый в мире язык программирования на русском языке, транслируемый в Java с помощью Runtime компилятора. Yoptava позволяет выбрать определённую лексику для программирования, например:
 
-- [ruptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.ruptava) — классический язык программирования Java на русском языке
+- [ruptava](https://github.com/Lime-blur/yoptava/blob/main/ruptava/Load.ruptava) — классический язык программирования Java на русском языке
 - [yoptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.yoptava) — язык программирования Java для гопников и реальных пацанов, основанный на [YoptaScript](http://yopta.space/)
-- [leptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.leptava) — язык программирования Java использующий старославянскую лексику
+- [leptava](https://github.com/Lime-blur/yoptava/blob/main/leptava/Load.leptava) — язык программирования Java использующий старославянскую лексику
 
 ## Разработка
 
@@ -27,7 +27,7 @@ Yoptava не несёт в себе цели оскорбить кого-то и
 - Скачайте [последнюю версию](https://github.com/Lime-blur/yoptava/archive/refs/heads/main.zip) языка
 - Установите Java SDK в Project Structure. Минимальная версия Java SDK — 1.8
 - Внесите нужные настройки в файле [YoptavaSettings](https://github.com/Lime-blur/yoptava/blob/main/src/main/java/ru/limedev/yoptava/settings/YoptavaSettings.java)
-- Приступайте к написанию кода [ruptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.ruptava), [yoptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.yoptava) или [leptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.leptava), в зависимости от выставленных настроек
+- Приступайте к написанию кода [ruptava](https://github.com/Lime-blur/yoptava/blob/main/ruptava/Load.ruptava), [yoptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.yoptava) или [leptava](https://github.com/Lime-blur/yoptava/blob/main/leptava/Load.leptava), в зависимости от выставленных настроек
 
 ## Проблемы
 
@@ -69,4 +69,4 @@ public static final String SOURCES_DIRECTORY = "myptava";
 ```
 
 ## Примеры
-В файлах [ruptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.ruptava), [yoptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.yoptava) и [leptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.leptava) присутствуют примеры использования массивов, циклов, switch-оператора, а также реализации методов. **Приветствуется** дополнение примеров.
+В файлах [ruptava](https://github.com/Lime-blur/yoptava/blob/main/ruptava/Load.ruptava), [yoptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.yoptava) и [leptava](https://github.com/Lime-blur/yoptava/blob/main/leptava/Load.leptava) присутствуют примеры использования массивов, циклов, switch-оператора, а также реализации методов. **Приветствуется** дополнение примеров.
