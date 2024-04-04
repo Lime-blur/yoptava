@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.HashMap;
 import java.util.Map;
 
-public class YoptavaDictionary implements Dictionary {
+public class GoptavaDictionary implements Dictionary {
 
     private final Map<String, String> keywords = new HashMap<String, String>() {
         {
