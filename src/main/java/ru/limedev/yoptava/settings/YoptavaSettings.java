@@ -21,7 +21,7 @@ public class YoptavaSettings {
      * The initial directory where Russian-language java files are located taking into account
      * the project name.
      */
-    public static final String PROJECT_SOURCES_DIRECTORY = "yoptava" + FileUtils.fileSeparator + SOURCES_DIRECTORY + FileUtils.fileSeparator;
+    public static final String PROJECT_SOURCES_DIRECTORY = System.getProperty("user.dir") + FileUtils.fileSeparator + SOURCES_DIRECTORY + FileUtils.fileSeparator;
 
     /**
      * The name of the file that launches Russian-language java files.
