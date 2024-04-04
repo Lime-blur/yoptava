@@ -25,6 +25,7 @@ Yoptava не несёт в себе цели оскорбить кого-то и
 ## Использование
 
 - Скачайте [последнюю версию](https://github.com/Lime-blur/yoptava/archive/refs/heads/main.zip) языка
+- Установите Java SDK в Project Structure. Минимальная версия Java SDK — 1.8
 - Внесите нужные настройки в файле [YoptavaSettings](https://github.com/Lime-blur/yoptava/blob/main/src/main/java/ru/limedev/yoptava/settings/YoptavaSettings.java)
 - Приступайте к написанию кода [ruptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.ruptava), [yoptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.yoptava) или [leptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.leptava), в зависимости от выставленных настроек
 
