@@ -8,9 +8,9 @@
 
 Yoptava — это первый в мире язык программирования на русском языке, транслируемый в Java с помощью Runtime компилятора. Yoptava позволяет выбрать определённую лексику для программирования, например:
 
-- [ruptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.ruptava) — классический язык программирования Java на русском языке.
-- [yoptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.yoptava) — язык программирования Java для гопников и реальных пацанов, основанный на [YoptaScript](http://yopta.space/).
-- [leptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.leptava) — язык программирования Java использующий старославянскую лексику.
+- [ruptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.ruptava) — классический язык программирования Java на русском языке
+- [yoptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.yoptava) — язык программирования Java для гопников и реальных пацанов, основанный на [YoptaScript](http://yopta.space/)
+- [leptava](https://github.com/Lime-blur/yoptava/blob/main/yoptava/Load.leptava) — язык программирования Java использующий старославянскую лексику
 
 ## Разработка
 
