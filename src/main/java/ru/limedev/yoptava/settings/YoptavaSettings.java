@@ -7,15 +7,15 @@ public class YoptavaSettings {
     /**
      * Current Russian programming language type.
      */
-    public static final LanguageType LANGUAGE_TYPE = LanguageType.YOPTAVA;
+    public static final LanguageType LANGUAGE_TYPE = LanguageType.GOPTAVA;
 
     /**
      * The initial directory where Russian-language java files are located.<br><br>
-     * For {@link LanguageType#YOPTAVA} = yoptava<br>
+     * For {@link LanguageType#GOPTAVA} = goptava<br>
      * For {@link LanguageType#RUPTAVA} = ruptava<br>
      * For {@link LanguageType#LEPTAVA} = leptava<br>
      */
-    public static final String SOURCES_DIRECTORY = "yoptava";
+    public static final String SOURCES_DIRECTORY = "goptava";
 
     /**
      * The initial directory where Russian-language java files are located taking into account

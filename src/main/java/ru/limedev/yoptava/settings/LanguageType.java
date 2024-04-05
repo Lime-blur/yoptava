@@ -3,11 +3,11 @@ package settings;
 import parser.dictionary.Dictionary;
 import parser.dictionary.LeptavaDictionary;
 import parser.dictionary.RuptavaDictionary;
-import parser.dictionary.YoptavaDictionary;
+import parser.dictionary.GoptavaDictionary;
 
 public enum LanguageType {
 
-    YOPTAVA(".yoptava", new YoptavaDictionary()),
+    GOPTAVA(".goptava", new GoptavaDictionary()),
     RUPTAVA(".ruptava", new RuptavaDictionary()),
     LEPTAVA(".leptava", new LeptavaDictionary());
 
