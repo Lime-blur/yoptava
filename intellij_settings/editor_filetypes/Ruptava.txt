@@ -13,6 +13,7 @@ Support paired braces: ✓ Support paired brackets: ✓
 Support paired parens: ✓ Support string escapes: ✓
 
 -- Keywords 1 --
+;
 публичный
 класс
 статический
