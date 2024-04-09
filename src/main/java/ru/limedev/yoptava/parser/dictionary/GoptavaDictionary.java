@@ -118,7 +118,7 @@ public class GoptavaDictionary implements Dictionary {
             put("заебошитьВсё", "addAll");
             put("уебатьВсем", "removeAll");
             put("уебатьВилкойвглаз", "removeIf");
-            put("убаломВпол", "retainAll");
+            put("ебаломВпол", "retainAll");
             put("урыть", "clear");
             put("жидкое", "stream");
             put("жидкоеГовно", "parallelStream");
