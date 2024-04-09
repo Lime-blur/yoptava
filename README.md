@@ -69,7 +69,7 @@ public static final String SOURCES_DIRECTORY = "myptava";
 ```
 
 ## Добавление подсветки синтаксиса
-Если вы пользуетесь Intellij Idea, вы можете добавить подсветку синтаксиса `.goptava`, `.ruptava`, `.leptava` файлов используя следующие файлы: [Ruptava.txt](https://github.com/Lime-blur/yoptava/blob/develop/intellij_settings/editor_filetypes/Ruptava.txt).
+Если вы пользуетесь Intellij Idea, вы можете добавить подсветку синтаксиса `.goptava`, `.ruptava`, `.leptava` файлов используя следующие файлы: [Ruptava.txt](https://github.com/Lime-blur/yoptava/blob/develop/intellij_settings/editor_filetypes/Ruptava.txt), [Yoptava.txt](https://github.com/Lime-blur/yoptava/blob/develop/intellij_settings/editor_filetypes/Yoptava.txt).
 
 ## Примеры
 В файлах [ruptava](https://github.com/Lime-blur/yoptava/blob/main/ruptava/Load.ruptava), [goptava](https://github.com/Lime-blur/yoptava/blob/main/goptava/Load.goptava) и [leptava](https://github.com/Lime-blur/yoptava/blob/main/leptava/Load.leptava) присутствуют примеры использования массивов, мап, циклов, switch-оператора, а также реализации методов. **Приветствуется** дополнение примеров.
