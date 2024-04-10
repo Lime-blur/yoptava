@@ -12,9 +12,9 @@ public class YoptavaParser {
     public static String parseAndConvert(String text) {
         String[] textParts = text.split(DOUBLE_QUOTED_PATTERN);
         Map<String, String> keywords = YoptavaSettings.LANGUAGE_TYPE.dictionary.getKeywords();
-        for (Map.Entry<String, String> entry : keywords.entrySet()) {
-            for (int i = 0; i < textParts.length; i++) {
-                if (i % 2 != 0) continue;
+        for (int i = 0; i < textParts.length; i++) {
+            if (i % 2 != 0) continue;
+            for (Map.Entry<String, String> entry : keywords.entrySet()) {
                 textParts[i] = replaceWord(textParts[i], entry.getKey(), entry.getValue());
             }
         }
@@ -22,6 +22,6 @@ public class YoptavaParser {
     }
 
     private static String replaceWord(String text, String word, String replace) {
-        return text.replaceAll(word, replace);
+        return text.replaceAll("\\b" + word + "\\b", replace);
     }
 }
