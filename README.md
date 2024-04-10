@@ -15,7 +15,7 @@ Yoptava — это первый в мире язык программирова�
 ## Разработка
 
 Вся разработка и поиск ошибок ведётся в ветке [**develop**](https://github.com/Lime-blur/yoptava/tree/develop)!
-При разработке языка использовался язык программирования [YoptaScript](http://yopta.space/), а также [Словарь старославянских слов](https://hogwarts.ru/library/show.php?cat=1&id=39503&uid=guest).
+При разработке языка использовался язык программирования [YoptaScript](http://yopta.space/), [Словарь старославянских слов](https://hogwarts.ru/library/show.php?cat=1&id=39503&uid=guest), [Словарь старорусских слов](https://proza.ru/2022/11/18/1773), а также [Викисловарь](https://www.wiktionary.org/).
 
 ## Предупреждения
 
@@ -69,7 +69,7 @@ public static final String SOURCES_DIRECTORY = "myptava";
 ```
 
 ## Добавление подсветки синтаксиса
-Если вы пользуетесь Intellij Idea, вы можете добавить подсветку синтаксиса `.goptava`, `.ruptava`, `.leptava` файлов используя следующие файлы: [Ruptava.txt](https://github.com/Lime-blur/yoptava/blob/develop/intellij_settings/editor_filetypes/Ruptava.txt), [Goptava.txt](https://github.com/Lime-blur/yoptava/blob/develop/intellij_settings/editor_filetypes/Goptava.txt).
+Если вы пользуетесь Intellij Idea, вы можете добавить подсветку синтаксиса `.goptava`, `.ruptava`, `.leptava` файлов используя следующие файлы: [Ruptava.txt](https://github.com/Lime-blur/yoptava/blob/develop/intellij_settings/editor_filetypes/Ruptava.txt), [Goptava.txt](https://github.com/Lime-blur/yoptava/blob/develop/intellij_settings/editor_filetypes/Goptava.txt), [Leptava.txt](https://github.com/Lime-blur/yoptava/blob/develop/intellij_settings/editor_filetypes/Leptava.txt).
 
 ## Примеры
 В файлах [ruptava](https://github.com/Lime-blur/yoptava/blob/main/ruptava/Load.ruptava), [goptava](https://github.com/Lime-blur/yoptava/blob/main/goptava/Load.goptava) и [leptava](https://github.com/Lime-blur/yoptava/blob/main/leptava/Load.leptava) присутствуют примеры использования массивов, мап, циклов, switch-оператора, а также реализации методов. **Приветствуется** дополнение примеров.
