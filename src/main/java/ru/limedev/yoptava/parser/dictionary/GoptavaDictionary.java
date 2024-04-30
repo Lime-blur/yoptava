@@ -1,11 +1,12 @@
 package parser.dictionary;
 
 import org.jetbrains.annotations.NotNull;
+import parser.dictionary.abstraction.Dictionary;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class GoptavaDictionary implements Dictionary {
+public final class GoptavaDictionary implements Dictionary {
 
     private final Map<String, String> keywords = new HashMap<String, String>() {
         {

@@ -6,7 +6,7 @@ import java.nio.file.Path;
 
 import files.FileUtils;
 
-public class CacheUtils {
+public final class CacheUtils {
 
     public static final String CACHE_DIRECTORY = ".cache";
 

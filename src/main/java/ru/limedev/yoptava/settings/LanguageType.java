@@ -1,6 +1,6 @@
 package settings;
 
-import parser.dictionary.Dictionary;
+import parser.dictionary.abstraction.Dictionary;
 import parser.dictionary.LeptavaDictionary;
 import parser.dictionary.RuptavaDictionary;
 import parser.dictionary.GoptavaDictionary;

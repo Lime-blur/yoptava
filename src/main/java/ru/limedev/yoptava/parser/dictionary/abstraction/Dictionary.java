@@ -1,4 +1,4 @@
-package parser.dictionary;
+package parser.dictionary.abstraction;
 
 import org.jetbrains.annotations.NotNull;
 
