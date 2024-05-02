@@ -7,7 +7,7 @@ public final class RuptavaSettings implements YoptavaSettings {
 
     @Override
     public Language getLanguage() {
-        return Settings.LANGUAGE_TYPE_RUPTAVA;
+        return Settings.LANGUAGE_RUPTAVA;
     }
 
     @Override

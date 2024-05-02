@@ -7,7 +7,7 @@ public final class GoptavaSettings implements YoptavaSettings {
 
     @Override
     public Language getLanguage() {
-        return Settings.LANGUAGE_TYPE_GOPTAVA;
+        return Settings.LANGUAGE_GOPTAVA;
     }
 
     @Override

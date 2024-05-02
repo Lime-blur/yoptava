@@ -7,7 +7,7 @@ public final class LeptavaSettings implements YoptavaSettings {
 
     @Override
     public Language getLanguage() {
-        return Settings.LANGUAGE_TYPE_LEPTAVA;
+        return Settings.LANGUAGE_LEPTAVA;
     }
 
     @Override
