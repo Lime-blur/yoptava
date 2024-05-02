@@ -6,11 +6,22 @@
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Lime-blur/yoptava/issues)
 [![yoptava license](https://img.shields.io/github/license/Lime-blur/yoptava)](https://github.com/Lime-blur/yoptava/blob/main/LICENSE)
 
+# Содержание
+1. [О языке](https://github.com/Lime-blur/yoptava/edit/yoptava-library/README.md#%D0%BE-%D1%8F%D0%B7%D1%8B%D0%BA%D0%B5)
+2. [Разработка](https://github.com/Lime-blur/yoptava/edit/yoptava-library/README.md#%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0)
+3. [Предупреждения](https://github.com/Lime-blur/yoptava/edit/yoptava-library/README.md#%D0%BF%D1%80%D0%B5%D0%B4%D1%83%D0%BF%D1%80%D0%B5%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F)
+4. [Использование](https://github.com/Lime-blur/yoptava/edit/yoptava-library/README.md#%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)
+5. [Добавление собственного словаря](https://github.com/Lime-blur/yoptava/edit/yoptava-library/README.md#%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D1%81%D0%BE%D0%B1%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE-%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8F)
+6. [Проблемы](https://github.com/Lime-blur/yoptava/edit/yoptava-library/README.md#%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D1%8B)
+7. [Добавление подсветки синтаксиса](https://github.com/Lime-blur/yoptava/edit/yoptava-library/README.md#%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE%D0%B4%D1%81%D0%B2%D0%B5%D1%82%D0%BA%D0%B8-%D1%81%D0%B8%D0%BD%D1%82%D0%B0%D0%BA%D1%81%D0%B8%D1%81%D0%B0)
+8. [Примеры](https://github.com/Lime-blur/yoptava/edit/yoptava-library/README.md#%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B)
+
+## О языке
 Yoptava — это первый в мире язык программирования на русском языке, транслируемый в Java с помощью Runtime компилятора. Yoptava позволяет выбрать определённую лексику для программирования, например:
 
-- [ruptava](https://github.com/Lime-blur/yoptava/blob/main/ruptava/Load.ruptava) — классический язык программирования Java на русском языке
-- [goptava](https://github.com/Lime-blur/yoptava/blob/main/goptava/Load.goptava) — язык программирования Java для гопников и реальных пацанов, основанный на [YoptaScript](http://yopta.space/)
-- [leptava](https://github.com/Lime-blur/yoptava/blob/main/leptava/Load.leptava) — язык программирования Java использующий старославянскую лексику
+- [ruptava](https://github.com/Lime-blur/yoptava/blob/main/example/ruptava/Load.ruptava) — классический язык программирования Java на русском языке
+- [goptava](https://github.com/Lime-blur/yoptava/blob/main/example/goptava/Load.goptava) — язык программирования Java для гопников и реальных пацанов, основанный на [YoptaScript](http://yopta.space/)
+- [leptava](https://github.com/Lime-blur/yoptava/blob/main/example/leptava/Load.leptava) — язык программирования Java использующий старославянскую лексику
 
 ## Разработка
 
@@ -19,28 +30,49 @@ Yoptava — это первый в мире язык программирова�
 
 ## Предупреждения
 
-Yoptava была реализована всего за несколько дней и не является серьёзной разработкой.
-Yoptava не несёт в себе цели оскорбить кого-то или унизить. Yoptava содержит **множество нецензурной лексики**.
+> [!CAUTION]
+> Yoptava была реализована всего за несколько дней и не является серьёзной разработкой.<br>
+> Yoptava не несёт в себе цели оскорбить кого-то или унизить. Yoptava содержит **множество нецензурной лексики**.
 
 ## Использование
 
-- Скачайте [последнюю версию](https://github.com/Lime-blur/yoptava/archive/refs/heads/main.zip) языка
-- Установите Java SDK в Project Structure. Минимальная версия Java SDK — 1.8
-- Внесите нужные настройки в файле [YoptavaSettings](https://github.com/Lime-blur/yoptava/blob/main/src/main/java/ru/limedev/yoptava/settings/YoptavaSettings.java)
-- Приступайте к написанию кода [ruptava](https://github.com/Lime-blur/yoptava/blob/main/ruptava/Load.ruptava), [goptava](https://github.com/Lime-blur/yoptava/blob/main/goptava/Load.goptava) или [leptava](https://github.com/Lime-blur/yoptava/blob/main/leptava/Load.leptava), в зависимости от выставленных настроек
+1. Добавьте репозиторий JitPack в файл сборки:
+```XML
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
 
-## Проблемы
+2. Добавьте зависимость:
+```XML
+<dependency>
+    <groupId>com.github.Lime-blur</groupId>
+    <artifactId>yoptava</artifactId>
+    <version>latest_version</version>
+</dependency>
+```
 
-- Yoptava поддерживает только компиляцию класса `Load`. Очень **приветствуется** доработка языка под компиляцию дерева `.goptava`, `.ruptava`, `.leptava` файлов
-- Также **приветствуется** упрощение парсинга файлов в классе [YoptavaParser](https://github.com/Lime-blur/yoptava/blob/main/src/main/java/ru/limedev/yoptava/parser/YoptavaParser.java)
+3. Инициализируйте необходимый язык программирования, например `Goptava`:
+```Java
+public class Main {
+    public static void main(String[] args) {
+        Yoptava.initGoptava();
+    }
+}
+```
+
+4. Приступайте к написанию русскоязычного Java кода в файле `Load.goptava`, предварительно положив его в папку `goptava` в корне вашего проекта! Примеры реализации: [goptava](https://github.com/Lime-blur/yoptava/blob/main/example/src/main/java/ru/limedev/example/example_goptava), [leptava](https://github.com/Lime-blur/yoptava/blob/main/example/src/main/java/ru/limedev/example/example_leptava), [ruptava](https://github.com/Lime-blur/yoptava/blob/main/example/src/main/java/ru/limedev/example/example_ruptava).
 
 ## Добавление собственного словаря
 
-Имеется возможность добавить свой собственный словарь Yoptava. Для этого необходимо:
+Yoptava поддерживает возможность добавления собственного словаря. Для этого необходимо:
 
-- В пакете [dictionary](https://github.com/Lime-blur/yoptava/tree/main/src/main/java/ru/limedev/yoptava/parser/dictionary) создать новый класс, например:
+1. Реализовать класс словаря:
 ```Java
-public class MyptavaDictionary implements Dictionary {
+public final class MyptavaDictionary implements Dictionary {
 
     private final Map<String, String> keywords = new HashMap<String, String>() {
         {
@@ -54,22 +86,71 @@ public class MyptavaDictionary implements Dictionary {
     }
 }
 ```
-- Добавить созданный класс как новый тип языка в [LanguageType](https://github.com/Lime-blur/yoptava/blob/main/src/main/java/ru/limedev/yoptava/settings/LanguageType.java):
-```Java
-MYPTAVA(".myptava", new MyptavaDictionary())
-```
-- Создать новую папку `myptava` в корне проекта
-- В [YoptavaSettings](https://github.com/Lime-blur/yoptava/blob/main/src/main/java/ru/limedev/yoptava/settings/YoptavaSettings.java) изменить константы LANGUAGE_TYPE и SOURCES_DIRECTORY:
-```Java
-public static final LanguageType LANGUAGE_TYPE = LanguageType.MYPTAVA;
 
-..
-
-public static final String SOURCES_DIRECTORY = "myptava";
+2. Создать собственные настройки:
+```Java
+public final class Settings {
+    static final String PROJECT_PATH = System.getProperty("user.dir") + FileUtils.fileSeparator;
+    static final Language LANGUAGE_MYPTAVA = new Language(".myptava", new MyptavaDictionary());
+    static final String SOURCES_DIRECTORY_MYPTAVA = "myptava";
+    static final String PROJECT_SOURCES_DIRECTORY_MYPTAVA = PROJECT_PATH + SOURCES_DIRECTORY_MYPTAVA + FileUtils.fileSeparator;
+    static final String MAIN_CLASS_NAME_MYPTAVA = "Load";
+    static final String MAIN_CLASS_LOAD_METHOD_MYPTAVA = "load";
+}
 ```
+
+3. Реализовать класс настроек:
+```Java
+public final class MyptavaSettings implements YoptavaSettings {
+
+    @Override
+    public Language getLanguage() {
+        return Settings.LANGUAGE_MYPTAVA;
+    }
+
+    @Override
+    public String getSourcesDirectory() {
+        return Settings.SOURCES_DIRECTORY_MYPTAVA;
+    }
+
+    @Override
+    public String getProjectSourcesDirectory() {
+        return Settings.PROJECT_SOURCES_DIRECTORY_MYPTAVA;
+    }
+
+    @Override
+    public String getMainClassName() {
+        return Settings.MAIN_CLASS_NAME_MYPTAVA;
+    }
+
+    @Override
+    public String getMainClassLoadMethod() {
+        return Settings.MAIN_CLASS_LOAD_METHOD_MYPTAVA;
+    }
+}
+```
+
+4. Инициализировать собственный язык программирования:
+```Java
+public class Main {
+
+    private static final MyptavaSettings myptavaSettings = new MyptavaSettings();
+
+    public static void main(String[] args) {
+        Yoptava.init(myptavaSettings);
+    }
+}
+```
+
+5. После этого можно приступать к написанию кода на вашем языке программирования в файле `Load.myptava`, предварительно положив его в папку `myptava` в корне вашего проекта! Пример реализации: [custom](https://github.com/Lime-blur/yoptava/blob/main/example/src/main/java/ru/limedev/example/example_custom).
+
+## Проблемы
+
+- Yoptava поддерживает только компиляцию класса `Load`. Очень **приветствуется** доработка языка под компиляцию дерева `.goptava`, `.ruptava`, `.leptava` файлов
+- Также **приветствуется** упрощение парсинга файлов в классе [YoptavaParser](https://github.com/Lime-blur/yoptava/blob/main/src/main/java/ru/limedev/yoptava/parser/YoptavaParser.java)
 
 ## Добавление подсветки синтаксиса
 Если вы пользуетесь Intellij Idea, вы можете добавить подсветку синтаксиса `.goptava`, `.ruptava`, `.leptava` файлов используя следующие файлы: [Ruptava.txt](https://github.com/Lime-blur/yoptava/blob/main/intellij_settings/editor_filetypes/Ruptava.txt), [Goptava.txt](https://github.com/Lime-blur/yoptava/blob/main/intellij_settings/editor_filetypes/Goptava.txt), [Leptava.txt](https://github.com/Lime-blur/yoptava/blob/main/intellij_settings/editor_filetypes/Leptava.txt).
 
 ## Примеры
-В файлах [ruptava](https://github.com/Lime-blur/yoptava/blob/main/ruptava/Load.ruptava), [goptava](https://github.com/Lime-blur/yoptava/blob/main/goptava/Load.goptava) и [leptava](https://github.com/Lime-blur/yoptava/blob/main/leptava/Load.leptava) присутствуют примеры использования массивов, мап, циклов, switch-оператора, а также реализации методов. **Приветствуется** дополнение примеров.
+В файлах [ruptava](https://github.com/Lime-blur/yoptava/blob/main/example/ruptava/Load.ruptava), [goptava](https://github.com/Lime-blur/yoptava/blob/main/example/goptava/Load.goptava) и [leptava](https://github.com/Lime-blur/yoptava/blob/main/example/leptava/Load.leptava) присутствуют примеры использования массивов, мап, циклов, switch-оператора, а также реализации методов. **Приветствуется** дополнение примеров.

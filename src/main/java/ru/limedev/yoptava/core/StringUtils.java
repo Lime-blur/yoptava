@@ -1,6 +1,6 @@
-package core;
+package ru.limedev.yoptava.core;
 
-public class StringUtils {
+public final class StringUtils {
 
     public static final String EMPTY_STRING = "";
 

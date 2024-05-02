@@ -1,4 +1,4 @@
-package files;
+package ru.limedev.yoptava.files;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,10 +8,10 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-import core.StringUtils;
-import settings.YoptavaSettings;
+import ru.limedev.yoptava.core.StringUtils;
+import ru.limedev.yoptava.settings.abstraction.YoptavaSettings;
 
-public class FileUtils {
+public final class FileUtils {
 
     public static final String JAVA_EXTENSION = ".java";
     public static final String fileSeparator = System.getProperty("file.separator");
@@ -24,10 +24,10 @@ public class FileUtils {
         Files.move(file, file.resolveSibling(newName));
     }
 
-    public static List<String> listShortFilesPath(String directoryName) {
+    public static List<String> listShortFilesPath(String directoryName, YoptavaSettings settings) {
         List<String> files = new ArrayList<>();
         for (String file : listFilesPath(directoryName)) {
-            String shortPath = StringUtils.replaceBefore(file, YoptavaSettings.PROJECT_SOURCES_DIRECTORY);
+            String shortPath = StringUtils.replaceBefore(file, settings.getProjectSourcesDirectory());
             files.add(shortPath);
         }
         return files;
