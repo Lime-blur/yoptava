@@ -1,7 +1,7 @@
-package settings;
+package ru.limedev.yoptava.settings;
 
-import settings.abstraction.YoptavaSettings;
-import settings.type.Language;
+import ru.limedev.yoptava.settings.abstraction.YoptavaSettings;
+import ru.limedev.yoptava.settings.type.Language;
 
 public final class LeptavaSettings implements YoptavaSettings {
 

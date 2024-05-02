@@ -1,7 +1,7 @@
-package settings.type;
+package ru.limedev.yoptava.settings.type;
 
 import org.jetbrains.annotations.NotNull;
-import parser.dictionary.abstraction.Dictionary;
+import ru.limedev.yoptava.parser.dictionary.abstraction.Dictionary;
 
 import java.util.Objects;
 

@@ -1,9 +1,9 @@
-package parser;
+package ru.limedev.yoptava.parser;
 
 import java.util.Map;
 
-import core.StringUtils;
-import settings.abstraction.YoptavaSettings;
+import ru.limedev.yoptava.core.StringUtils;
+import ru.limedev.yoptava.settings.abstraction.YoptavaSettings;
 
 public final class YoptavaParser {
 

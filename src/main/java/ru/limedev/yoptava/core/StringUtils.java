@@ -1,4 +1,4 @@
-package core;
+package ru.limedev.yoptava.core;
 
 public final class StringUtils {
 

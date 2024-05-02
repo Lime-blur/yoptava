@@ -1,8 +1,8 @@
-package settings;
+package ru.limedev.yoptava.settings;
 
-import files.FileUtils;
-import settings.type.Language;
-import settings.type.LanguageType;
+import ru.limedev.yoptava.files.FileUtils;
+import ru.limedev.yoptava.settings.type.Language;
+import ru.limedev.yoptava.settings.type.LanguageType;
 
 final class Settings {
     static final String PROJECT_PATH = System.getProperty("user.dir") + FileUtils.fileSeparator;

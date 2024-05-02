@@ -1,4 +1,4 @@
-package files;
+package ru.limedev.yoptava.files;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,8 +8,8 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-import core.StringUtils;
-import settings.abstraction.YoptavaSettings;
+import ru.limedev.yoptava.core.StringUtils;
+import ru.limedev.yoptava.settings.abstraction.YoptavaSettings;
 
 public final class FileUtils {
 

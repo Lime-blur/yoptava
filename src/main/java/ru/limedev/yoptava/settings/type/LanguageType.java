@@ -1,8 +1,8 @@
-package settings.type;
+package ru.limedev.yoptava.settings.type;
 
-import parser.dictionary.GoptavaDictionary;
-import parser.dictionary.LeptavaDictionary;
-import parser.dictionary.RuptavaDictionary;
+import ru.limedev.yoptava.parser.dictionary.GoptavaDictionary;
+import ru.limedev.yoptava.parser.dictionary.LeptavaDictionary;
+import ru.limedev.yoptava.parser.dictionary.RuptavaDictionary;
 
 public enum LanguageType {
 

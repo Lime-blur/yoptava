@@ -1,14 +1,14 @@
-package files;
+package ru.limedev.yoptava.files;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import cache.CacheUtils;
-import core.StringUtils;
-import parser.YoptavaParser;
-import settings.abstraction.YoptavaSettings;
+import ru.limedev.yoptava.cache.CacheUtils;
+import ru.limedev.yoptava.core.StringUtils;
+import ru.limedev.yoptava.parser.YoptavaParser;
+import ru.limedev.yoptava.settings.abstraction.YoptavaSettings;
 
 public final class YoptavaFileUtils {
 

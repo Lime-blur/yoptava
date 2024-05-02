@@ -1,7 +1,7 @@
-package settings.abstraction;
+package ru.limedev.yoptava.settings.abstraction;
 
-import settings.type.LanguageType;
-import settings.type.Language;
+import ru.limedev.yoptava.settings.type.Language;
+import ru.limedev.yoptava.settings.type.LanguageType;
 
 public interface YoptavaSettings {
 

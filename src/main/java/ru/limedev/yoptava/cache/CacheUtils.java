@@ -1,10 +1,10 @@
-package cache;
+package ru.limedev.yoptava.cache;
+
+import ru.limedev.yoptava.files.FileUtils;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-
-import files.FileUtils;
 
 public final class CacheUtils {
 

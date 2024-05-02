@@ -1,19 +1,20 @@
+package ru.limedev.yoptava;
+
 import com.itranswarp.compiler.JavaStringCompiler;
+import ru.limedev.yoptava.cache.CacheUtils;
+import ru.limedev.yoptava.core.StringUtils;
+import ru.limedev.yoptava.files.FileUtils;
+import ru.limedev.yoptava.files.YoptavaFileUtils;
+import ru.limedev.yoptava.settings.GoptavaSettings;
+import ru.limedev.yoptava.settings.LeptavaSettings;
+import ru.limedev.yoptava.settings.RuptavaSettings;
+import ru.limedev.yoptava.settings.abstraction.YoptavaSettings;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
-
-import cache.CacheUtils;
-import core.StringUtils;
-import files.FileUtils;
-import files.YoptavaFileUtils;
-import settings.GoptavaSettings;
-import settings.LeptavaSettings;
-import settings.RuptavaSettings;
-import settings.abstraction.YoptavaSettings;
 
 public final class Yoptava {
 
