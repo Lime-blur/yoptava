@@ -1,0 +1,9 @@
+öffentlich klasse Load {
+
+    /**
+     * Eine alternative zur "main" methode in java.
+     */
+    öffentlich statisch finale leere load() {
+        System.aus.druckenln("Hallo Welt!");
+    }
+}

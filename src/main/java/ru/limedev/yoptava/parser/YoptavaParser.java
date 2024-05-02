@@ -1,17 +1,17 @@
-package parser;
+package ru.limedev.yoptava.parser;
 
 import java.util.Map;
 
-import core.StringUtils;
-import settings.YoptavaSettings;
+import ru.limedev.yoptava.core.StringUtils;
+import ru.limedev.yoptava.settings.abstraction.YoptavaSettings;
 
-public class YoptavaParser {
+public final class YoptavaParser {
 
     private static final String DOUBLE_QUOTED_PATTERN = "(?!\\\\\")(?=\")";
 
-    public static String parseAndConvert(String text) {
+    public static String parseAndConvert(String text, YoptavaSettings settings) {
         String[] textParts = text.split(DOUBLE_QUOTED_PATTERN);
-        Map<String, String> keywords = YoptavaSettings.LANGUAGE_TYPE.dictionary.getKeywords();
+        Map<String, String> keywords = settings.getLanguage().getDictionary().getKeywords();
         for (int i = 0; i < textParts.length; i++) {
             if (i % 2 != 0) continue;
             for (Map.Entry<String, String> entry : keywords.entrySet()) {

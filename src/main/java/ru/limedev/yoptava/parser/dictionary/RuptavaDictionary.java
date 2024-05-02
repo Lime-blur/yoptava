@@ -1,11 +1,12 @@
-package parser.dictionary;
+package ru.limedev.yoptava.parser.dictionary;
 
 import org.jetbrains.annotations.NotNull;
+import ru.limedev.yoptava.parser.dictionary.abstraction.Dictionary;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class RuptavaDictionary implements Dictionary {
+public final class RuptavaDictionary implements Dictionary {
 
     private final Map<String, String> keywords = new HashMap<String, String>() {
         {
