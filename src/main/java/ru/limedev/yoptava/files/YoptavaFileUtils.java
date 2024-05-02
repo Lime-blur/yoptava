@@ -8,12 +8,12 @@ import java.nio.file.Path;
 import cache.CacheUtils;
 import core.StringUtils;
 import parser.YoptavaParser;
-import settings.settings.abstraction.YoptavaSettings;
+import settings.abstraction.YoptavaSettings;
 
 public final class YoptavaFileUtils {
 
     public static String getCachedYoptavaName(String file, YoptavaSettings settings) {
-        return file.replace(settings.getLanguageType().extension, FileUtils.JAVA_EXTENSION);
+        return file.replace(settings.getLanguage().getExtension(), FileUtils.JAVA_EXTENSION);
     }
 
     public static String readYoptavaFromCache(String javaFile, YoptavaSettings settings) throws IOException {

@@ -10,19 +10,43 @@ import cache.CacheUtils;
 import core.StringUtils;
 import files.FileUtils;
 import files.YoptavaFileUtils;
-import settings.settings.DefaultSettings;
-import settings.settings.abstraction.YoptavaSettings;
+import settings.GoptavaSettings;
+import settings.LeptavaSettings;
+import settings.RuptavaSettings;
+import settings.abstraction.YoptavaSettings;
 
 public final class Yoptava {
 
     private static final Map<String, String> contents = new HashMap<>();
     private static final Map<String, Map<String, byte[]>> compileResults = new HashMap<>();
 
-    public static void init() {
-        YoptavaSettings settings = new DefaultSettings();
+    /**
+     * Initializes Goptava classes with default settings.
+     */
+    public static void initGoptava() {
+        YoptavaSettings settings = new GoptavaSettings();
         init(settings);
     }
 
+    /**
+     * Initializes Goptava classes with default settings.
+     */
+    public static void initLeptava() {
+        YoptavaSettings settings = new LeptavaSettings();
+        init(settings);
+    }
+
+    /**
+     * Initializes Ruptava classes with default settings.
+     */
+    public static void initRuptava() {
+        YoptavaSettings settings = new RuptavaSettings();
+        init(settings);
+    }
+
+    /**
+     * Initializes Yoptava classes with {@link YoptavaSettings}.
+     */
     public static void init(YoptavaSettings settings) {
         JavaStringCompiler compiler = new JavaStringCompiler();
         try {

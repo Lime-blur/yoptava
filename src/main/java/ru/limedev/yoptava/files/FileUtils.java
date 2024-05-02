@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import core.StringUtils;
-import settings.settings.abstraction.YoptavaSettings;
+import settings.abstraction.YoptavaSettings;
 
 public final class FileUtils {
 
