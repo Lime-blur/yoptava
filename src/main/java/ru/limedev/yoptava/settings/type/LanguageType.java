@@ -6,15 +6,9 @@ import ru.limedev.yoptava.parser.dictionary.RuptavaDictionary;
 
 public enum LanguageType {
 
-    GOPTAVA(
-        new Language(".goptava", new GoptavaDictionary())
-    ),
-    RUPTAVA(
-        new Language(".ruptava", new RuptavaDictionary())
-    ),
-    LEPTAVA(
-        new Language(".leptava", new LeptavaDictionary())
-    );
+    GOPTAVA(new Language(".goptava", new GoptavaDictionary())),
+    RUPTAVA(new Language(".ruptava", new RuptavaDictionary())),
+    LEPTAVA(new Language(".leptava", new LeptavaDictionary()));
 
     public final Language language;
 

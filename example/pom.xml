@@ -31,7 +31,7 @@
         <dependency>
             <groupId>com.github.Lime-blur</groupId>
             <artifactId>yoptava</artifactId>
-            <version>yoptava-library-8ba0d21517-1</version>
+            <version>yoptava-library-1ac015d710-1</version>
         </dependency>
     </dependencies>
 </project>
