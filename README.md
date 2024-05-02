@@ -7,14 +7,14 @@
 [![yoptava license](https://img.shields.io/github/license/Lime-blur/yoptava)](https://github.com/Lime-blur/yoptava/blob/main/LICENSE)
 
 # Содержание
-1. [О языке](https://github.com/Lime-blur/yoptava/edit/yoptava-library/README.md#%D0%BE-%D1%8F%D0%B7%D1%8B%D0%BA%D0%B5)
-2. [Разработка](https://github.com/Lime-blur/yoptava/edit/yoptava-library/README.md#%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0)
-3. [Предупреждения](https://github.com/Lime-blur/yoptava/edit/yoptava-library/README.md#%D0%BF%D1%80%D0%B5%D0%B4%D1%83%D0%BF%D1%80%D0%B5%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F)
-4. [Использование](https://github.com/Lime-blur/yoptava/edit/yoptava-library/README.md#%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)
-5. [Добавление собственного словаря](https://github.com/Lime-blur/yoptava/edit/yoptava-library/README.md#%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D1%81%D0%BE%D0%B1%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE-%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8F)
-6. [Проблемы](https://github.com/Lime-blur/yoptava/edit/yoptava-library/README.md#%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D1%8B)
-7. [Добавление подсветки синтаксиса](https://github.com/Lime-blur/yoptava/edit/yoptava-library/README.md#%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE%D0%B4%D1%81%D0%B2%D0%B5%D1%82%D0%BA%D0%B8-%D1%81%D0%B8%D0%BD%D1%82%D0%B0%D0%BA%D1%81%D0%B8%D1%81%D0%B0)
-8. [Примеры](https://github.com/Lime-blur/yoptava/edit/yoptava-library/README.md#%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B)
+1. [О языке](https://github.com/Lime-blur/yoptava?tab=readme-ov-file#%D0%BE-%D1%8F%D0%B7%D1%8B%D0%BA%D0%B5)
+2. [Разработка](https://github.com/Lime-blur/yoptava?tab=readme-ov-file#%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0)
+3. [Предупреждения](https://github.com/Lime-blur/yoptava?tab=readme-ov-file#%D0%BF%D1%80%D0%B5%D0%B4%D1%83%D0%BF%D1%80%D0%B5%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F)
+4. [Использование](https://github.com/Lime-blur/yoptava?tab=readme-ov-file#%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)
+5. [Добавление собственного словаря](https://github.com/Lime-blur/yoptava?tab=readme-ov-file#%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D1%81%D0%BE%D0%B1%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE-%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8F)
+6. [Проблемы](https://github.com/Lime-blur/yoptava?tab=readme-ov-file#%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D1%8B)
+7. [Добавление подсветки синтаксиса](https://github.com/Lime-blur/yoptava?tab=readme-ov-file#%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE%D0%B4%D1%81%D0%B2%D0%B5%D1%82%D0%BA%D0%B8-%D1%81%D0%B8%D0%BD%D1%82%D0%B0%D0%BA%D1%81%D0%B8%D1%81%D0%B0)
+8. [Примеры](https://github.com/Lime-blur/yoptava?tab=readme-ov-file#%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B)
 
 ## О языке
 Yoptava — это первый в мире язык программирования на русском языке, транслируемый в Java с помощью Runtime компилятора. Yoptava позволяет выбрать определённую лексику для программирования, например:
