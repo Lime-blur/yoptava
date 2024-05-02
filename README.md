@@ -2,7 +2,7 @@
 
 [![yoptava logo](https://github.com/Lime-blur/yoptava/blob/main/images/yoptava.png)](https://github.com/Lime-blur/yoptava/)
 
-[![yoptava](https://img.shields.io/badge/%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-Yoptava-green)](https://github.com/Lime-blur/yoptava/archive/refs/heads/main.zip)
+[![release](https://jitpack.io/v/Lime-blur/yoptava.svg)](https://github.com/Lime-blur/yoptava/releases/latest)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Lime-blur/yoptava/issues)
 [![yoptava license](https://img.shields.io/github/license/Lime-blur/yoptava)](https://github.com/Lime-blur/yoptava/blob/main/LICENSE)
 
