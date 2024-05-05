@@ -67,6 +67,9 @@ public final class RuptavaDictionary implements Dictionary {
             put("ложь", "false");
             put("нулевой", "null");
 
+            // Annotations
+            put("Переопределить", "Override");
+
             // Object
             put("Объект", "Object");
             put("получитьКласс", "getClass");

@@ -89,6 +89,7 @@ Support paired parens: ✓ Support string escapes: ✓
 порожняк
 
 -- Keywords 2 --
+@Перебить
 
 -- Keywords 3 --
 системноНаПечать

@@ -1,8 +1,8 @@
 package ru.limedev.yoptava;
 
-import com.itranswarp.compiler.JavaStringCompiler;
 import ru.limedev.yoptava.cache.CacheUtils;
-import ru.limedev.yoptava.core.StringUtils;
+import ru.limedev.yoptava.compiler.RuntimeCompiler;
+import ru.limedev.yoptava.compiler.exception.CompilationException;
 import ru.limedev.yoptava.files.FileUtils;
 import ru.limedev.yoptava.files.YoptavaFileUtils;
 import ru.limedev.yoptava.settings.GoptavaSettings;
@@ -13,13 +13,8 @@ import ru.limedev.yoptava.settings.abstraction.YoptavaSettings;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.Map;
 
 public final class Yoptava {
-
-    private static final Map<String, String> contents = new HashMap<>();
-    private static final Map<String, Map<String, byte[]>> compileResults = new HashMap<>();
 
     /**
      * Initializes Goptava classes with default settings.
@@ -49,12 +44,12 @@ public final class Yoptava {
      * Initializes Yoptava classes with {@link YoptavaSettings}.
      */
     public static void init(YoptavaSettings settings) {
-        JavaStringCompiler compiler = new JavaStringCompiler();
+        RuntimeCompiler compiler = new RuntimeCompiler();
         try {
             prepareCache(settings);
-            loadClasses(settings);
+            convertClasses(settings);
             compileClasses(compiler);
-            loadClasses(compiler, settings);
+            runMainClass(compiler, settings);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -62,7 +57,7 @@ public final class Yoptava {
     }
 
     private static void prepareCache(YoptavaSettings settings) throws IOException {
-        CacheUtils.refreshCacheDirectory();
+        CacheUtils.refreshCache();
         YoptavaFileUtils.createSourcesInCacheDirectory(settings);
         String sourcesDirectory = YoptavaFileUtils.getSourcesDirectory(settings);
         for (String file : FileUtils.listShortFilesPath(sourcesDirectory, settings)) {
@@ -71,40 +66,31 @@ public final class Yoptava {
     }
 
     private static void clearCache() {
-        CacheUtils.clearCacheDirectory();
+        CacheUtils.clearCache();
     }
 
-    private static void loadClasses(YoptavaSettings settings) throws IOException {
+    private static void convertClasses(YoptavaSettings settings) throws IOException {
         String sourcesDirectory = YoptavaFileUtils.getSourcesDirectory(settings);
-        for (String file : FileUtils.listShortFilesPath(sourcesDirectory, settings)) {
-            String javaFile = YoptavaFileUtils.getCachedYoptavaName(file, settings);
-            contents.put(
-                javaFile, YoptavaFileUtils.readYoptavaFromCache(javaFile, settings)
-            );
+        for (String file : FileUtils.listFilesPath(sourcesDirectory)) {
+            String javaFile = YoptavaFileUtils.getCachedYoptavaShortPath(file, settings);
+            YoptavaFileUtils.convertCachedYoptava(javaFile, settings);
         }
     }
 
-    private static void compileClasses(JavaStringCompiler compiler) throws IOException {
-        for (Map.Entry<String, String> entry : contents.entrySet()) {
-            compileResults.put(
-                entry.getKey(),
-                compiler.compile(entry.getKey(), entry.getValue())
-            );
-        }
+    private static void compileClasses(RuntimeCompiler compiler) throws CompilationException {
+        compiler.setClassesDir(CacheUtils.CLASSES_DIRECTORY);
+        compiler.setSourceDir(CacheUtils.getCacheDirectory());
+        compiler.compile();
+        compiler.loadClassesFromCompiledDirectory();
     }
 
-    private static void loadClasses(JavaStringCompiler compiler, YoptavaSettings settings) throws
-            IOException,
-            ClassNotFoundException,
+    private static void runMainClass(RuntimeCompiler compiler, YoptavaSettings settings) throws
+            CompilationException,
+            InvocationTargetException,
             IllegalAccessException,
-            NoSuchMethodException,
-            InvocationTargetException {
-        Class<?> mainClass = null;
-        for (Map.Entry<String, Map<String, byte[]>> entry : compileResults.entrySet()) {
-            String className = entry.getKey().replace(FileUtils.JAVA_EXTENSION, StringUtils.EMPTY_STRING);
-            Class<?> clazz = compiler.loadClass(className, entry.getValue());
-            if (className.equals(settings.getMainClassName())) mainClass = clazz;
-        }
+            NoSuchMethodException {
+        String mainClassName = settings.getMainClassName();
+        Class<?> mainClass = compiler.getClassFromCompiledDirectory(mainClassName);
         runMainClass(mainClass, settings);
     }
 
