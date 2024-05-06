@@ -68,6 +68,7 @@ Support paired parens: ✓ Support string escapes: ✓
 ничтожевелие
 
 -- Keywords 2 --
+@Переопределити
 
 -- Keywords 3 --
 распечататиСистемой

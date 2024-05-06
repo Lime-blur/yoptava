@@ -17,16 +17,6 @@ public final class Language {
         this.dictionary = dictionary;
     }
 
-    @NotNull
-    public String getExtension() {
-        return this.extension;
-    }
-
-    @NotNull
-    public Dictionary getDictionary() {
-        return this.dictionary;
-    }
-
     @Override
     public int hashCode() {
         int result = this.extension.hashCode();
@@ -40,5 +30,15 @@ public final class Language {
         if (!(o instanceof Language)) return false;
         Language that = (Language) o;
         return Objects.equals(extension, that.extension) && Objects.equals(dictionary, that.dictionary);
+    }
+
+    @NotNull
+    public String getExtension() {
+        return this.extension;
+    }
+
+    @NotNull
+    public Dictionary getDictionary() {
+        return this.dictionary;
     }
 }

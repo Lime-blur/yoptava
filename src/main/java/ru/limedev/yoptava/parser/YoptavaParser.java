@@ -2,7 +2,7 @@ package ru.limedev.yoptava.parser;
 
 import java.util.Map;
 
-import ru.limedev.yoptava.core.StringUtils;
+import ru.limedev.yoptava.utils.StringUtils;
 import ru.limedev.yoptava.settings.abstraction.YoptavaSettings;
 
 public final class YoptavaParser {

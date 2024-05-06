@@ -89,6 +89,9 @@ public final class GoptavaDictionary implements Dictionary {
             put("нуллио", "null");
             put("порожняк", "null");
 
+            // Annotations
+            put("Перебить", "Override");
+
             // Object
             put("Петух", "Object");
             put("вычислитьКласс", "getClass");
