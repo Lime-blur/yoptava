@@ -1,5 +1,8 @@
 package ru.limedev.yoptava.files;
 
+import ru.limedev.yoptava.settings.abstraction.YoptavaSettings;
+import ru.limedev.yoptava.utils.StringUtils;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -8,13 +11,25 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-import ru.limedev.yoptava.core.StringUtils;
-import ru.limedev.yoptava.settings.abstraction.YoptavaSettings;
-
 public final class FileUtils {
 
     public static final String JAVA_EXTENSION = ".java";
     public static final String fileSeparator = System.getProperty("file.separator");
+
+    public static boolean isJavaExtension(File file) {
+        return isJavaExtension(file.getName());
+    }
+
+    public static boolean isJavaExtension(String fileName) {
+        return getExtension(fileName).equals(JAVA_EXTENSION);
+    }
+
+    public static String getExtension(String fileName) {
+        String extension = "";
+        int i = fileName.lastIndexOf('.');
+        if (i > 0) extension = fileName.substring(i);
+        return extension.toLowerCase();
+    }
 
     public static Path getAbsolutePath(String path) {
         return Paths.get(path).toAbsolutePath();
@@ -27,7 +42,7 @@ public final class FileUtils {
     public static List<String> listShortFilesPath(String directoryName, YoptavaSettings settings) {
         List<String> files = new ArrayList<>();
         for (String file : listFilesPath(directoryName)) {
-            String shortPath = StringUtils.replaceBefore(file, settings.getProjectSourcesDirectory());
+            String shortPath = getShortFilePath(file, settings);
             files.add(shortPath);
         }
         return files;
@@ -51,6 +66,10 @@ public final class FileUtils {
             }
         }
         directory.delete();
+    }
+
+    public static String getShortFilePath(String file, YoptavaSettings settings) {
+        return StringUtils.replaceBefore(file, settings.getProjectSourcesDirectory());
     }
 
     private static void listFilesPath(String directoryName, List<String> files) {

@@ -67,6 +67,7 @@ Support paired parens: ✓ Support string escapes: ✓
 нулевой
 
 -- Keywords 2 --
+@Переопределить
 
 -- Keywords 3 --
 системноРаспечатать

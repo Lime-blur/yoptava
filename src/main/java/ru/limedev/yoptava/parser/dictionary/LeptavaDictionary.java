@@ -68,6 +68,9 @@ public final class LeptavaDictionary implements Dictionary {
             put("лесть", "false");
             put("ничтожевелие", "null");
 
+            // Annotations
+            put("Переопределити", "Override");
+
             // Object
             put("Начальникъ", "Object");
             put("поятиВидъ", "getClass");
