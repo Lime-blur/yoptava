@@ -67,7 +67,7 @@ public class Main {
 4. Приступайте к написанию русскоязычного Java кода в файле `Авторитет.goptava`, предварительно положив его в папку `goptava` в корне вашего проекта! Примеры реализации:
     - Goptava: [goptava](https://github.com/Lime-blur/yoptava/blob/main/example/goptava), [example_goptava](https://github.com/Lime-blur/yoptava/blob/main/example/src/main/java/ru/limedev/example/example_goptava)
     - Leptava: [leptava](https://github.com/Lime-blur/yoptava/blob/main/example/leptava), [example_leptava](https://github.com/Lime-blur/yoptava/blob/main/example/src/main/java/ru/limedev/example/example_leptava)
-    - Ruptava: [leptava](https://github.com/Lime-blur/yoptava/blob/main/example/ruptava), [example_leptava](https://github.com/Lime-blur/yoptava/blob/main/example/src/main/java/ru/limedev/example/example_ruptava)
+    - Ruptava: [ruptava](https://github.com/Lime-blur/yoptava/blob/main/example/ruptava), [example_ruptava](https://github.com/Lime-blur/yoptava/blob/main/example/src/main/java/ru/limedev/example/example_ruptava)
 
 ## Добавление собственного словаря
 
