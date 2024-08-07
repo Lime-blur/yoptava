@@ -8,6 +8,7 @@ import ru.limedev.yoptava.files.YoptavaFileUtils;
 import ru.limedev.yoptava.settings.GoptavaSettings;
 import ru.limedev.yoptava.settings.LeptavaSettings;
 import ru.limedev.yoptava.settings.RuptavaSettings;
+import ru.limedev.yoptava.settings.BelptavaSettings;
 import ru.limedev.yoptava.settings.abstraction.YoptavaSettings;
 
 import java.io.IOException;
@@ -29,6 +30,14 @@ public final class Yoptava {
      */
     public static void initLeptava() {
         YoptavaSettings settings = new LeptavaSettings();
+        init(settings);
+    }
+
+    /**
+     * Initializes Belptava classes with default settings.
+     */
+    public static void initBelptava() {
+        YoptavaSettings settings = new BelptavaSettings();
         init(settings);
     }
 
