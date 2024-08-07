@@ -20,6 +20,7 @@
 Yoptava — это первый в мире язык программирования на русском языке, транслируемый в Java с помощью Runtime компилятора. Yoptava позволяет выбрать определённую лексику для программирования, например:
 
 - [ruptava](https://github.com/Lime-blur/yoptava/blob/main/example/ruptava) — классический язык программирования Java на русском языке
+- [belptava](https://github.com/Lime-blur/yoptava/blob/main/example/belptava) — классический язык программирования Java на белорусском языке
 - [goptava](https://github.com/Lime-blur/yoptava/blob/main/example/goptava) — язык программирования Java для гопников и реальных пацанов, основанный на [YoptaScript](http://yopta.space/)
 - [leptava](https://github.com/Lime-blur/yoptava/blob/main/example/leptava) — язык программирования Java использующий старославянскую лексику
 
@@ -68,6 +69,7 @@ public class Main {
     - Goptava: [goptava](https://github.com/Lime-blur/yoptava/blob/main/example/goptava), [example_goptava](https://github.com/Lime-blur/yoptava/blob/main/example/src/main/java/ru/limedev/example/example_goptava)
     - Leptava: [leptava](https://github.com/Lime-blur/yoptava/blob/main/example/leptava), [example_leptava](https://github.com/Lime-blur/yoptava/blob/main/example/src/main/java/ru/limedev/example/example_leptava)
     - Ruptava: [ruptava](https://github.com/Lime-blur/yoptava/blob/main/example/ruptava), [example_ruptava](https://github.com/Lime-blur/yoptava/blob/main/example/src/main/java/ru/limedev/example/example_ruptava)
+    - Belptava: [belptava](https://github.com/Lime-blur/yoptava/blob/main/example/belptava), [example_belptava](https://github.com/Lime-blur/yoptava/blob/main/example/src/main/java/ru/limedev/example/example_belptava)
 
 ## Добавление собственного словаря
 
@@ -150,10 +152,10 @@ public class Main {
 ## Проблемы
 
 - **Приветствуется** упрощение парсинга файлов в классе [YoptavaParser](https://github.com/Lime-blur/yoptava/blob/main/src/main/java/ru/limedev/yoptava/parser/YoptavaParser.java)
-- **Очень приветствуется** дополнение словарей `goptava`, `ruptava` и `leptava`
+- **Очень приветствуется** дополнение словарей `goptava`, `ruptava`, `belptava` и `leptava`
 
 ## Добавление подсветки синтаксиса
-Если вы пользуетесь Intellij Idea, вы можете добавить подсветку синтаксиса `.goptava`, `.ruptava`, `.leptava` файлов используя следующие файлы: [Ruptava.txt](https://github.com/Lime-blur/yoptava/blob/main/intellij_settings/editor_filetypes/Ruptava.txt), [Goptava.txt](https://github.com/Lime-blur/yoptava/blob/main/intellij_settings/editor_filetypes/Goptava.txt), [Leptava.txt](https://github.com/Lime-blur/yoptava/blob/main/intellij_settings/editor_filetypes/Leptava.txt).
+Если вы пользуетесь Intellij Idea, вы можете добавить подсветку синтаксиса `.goptava`, `.ruptava`, `belptava`, `.leptava` файлов используя следующие файлы: [Goptava.txt](https://github.com/Lime-blur/yoptava/blob/main/intellij_settings/editor_filetypes/Goptava.txt), [Ruptava.txt](https://github.com/Lime-blur/yoptava/blob/main/intellij_settings/editor_filetypes/Ruptava.txt), [Belptava.txt](https://github.com/Lime-blur/yoptava/blob/main/intellij_settings/editor_filetypes/Belptava.txt), [Leptava.txt](https://github.com/Lime-blur/yoptava/blob/main/intellij_settings/editor_filetypes/Leptava.txt).
 
 ## Примеры
-В [ruptava](https://github.com/Lime-blur/yoptava/blob/main/example/ruptava), [goptava](https://github.com/Lime-blur/yoptava/blob/main/example/goptava) и [leptava](https://github.com/Lime-blur/yoptava/blob/main/example/leptava) присутствуют примеры использования массивов, мап, циклов, switch-оператора, а также реализации пакетов, классов и методов.
+В [ruptava](https://github.com/Lime-blur/yoptava/blob/main/example/ruptava), [belptava](https://github.com/Lime-blur/yoptava/blob/main/example/belptava), [goptava](https://github.com/Lime-blur/yoptava/blob/main/example/goptava) и [leptava](https://github.com/Lime-blur/yoptava/blob/main/example/leptava) присутствуют примеры использования массивов, мап, циклов, switch-оператора, а также реализации пакетов, классов и методов.
