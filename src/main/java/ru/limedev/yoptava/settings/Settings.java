@@ -23,6 +23,13 @@ final class Settings {
     static final String MAIN_CLASS_NAME_LEPTAVA = "Истое";
     static final String MAIN_CLASS_LOAD_METHOD_LEPTAVA = "истое";
 
+    // Belptava default settings
+    static final Language LANGUAGE_BELPTAVA = LanguageType.BELPTAVA.language;
+    static final String SOURCES_DIRECTORY_BELPTAVA = "belptava";
+    static final String PROJECT_SOURCES_DIRECTORY_BELPTAVA = PROJECT_PATH + SOURCES_DIRECTORY_BELPTAVA + FileUtils.fileSeparator;
+    static final String MAIN_CLASS_NAME_BELPTAVA = "Галоўны";
+    static final String MAIN_CLASS_LOAD_METHOD_BELPTAVA = "галоўны";
+
     // Ruptava default settings
     static final Language LANGUAGE_RUPTAVA = LanguageType.RUPTAVA.language;
     static final String SOURCES_DIRECTORY_RUPTAVA = "ruptava";

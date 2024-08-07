@@ -15,6 +15,7 @@ public interface YoptavaSettings {
      * For {@link LanguageType#GOPTAVA} = goptava<br>
      * For {@link LanguageType#RUPTAVA} = ruptava<br>
      * For {@link LanguageType#LEPTAVA} = leptava<br>
+     * For {@link LanguageType#BELPTAVA} = belptava<br>
      */
     String getSourcesDirectory();
 
